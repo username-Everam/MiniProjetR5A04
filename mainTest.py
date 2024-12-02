@@ -2,6 +2,7 @@
 
 import element_commun1 as com
 import numpy as np
+import matplotlib.pyplot as plt
 
 def test_element_commun1() :
     for i in range(10):
@@ -16,4 +17,12 @@ def test_element_commun1() :
         x = com.element_commun1(liste1,liste2)
         print(x, liste_originelle1, liste_originelle2)
 
-print(com.test_element_chrono(1000))
+def afficher_graph(n):
+    tableau,tableau_res=com.test_element_chrono(n)
+    x=[*range(0,n,10)]
+
+    print(tableau_res)
+    plt.plot(x,tableau)
+    plt.show()
+    
+afficher_graph(10000)
