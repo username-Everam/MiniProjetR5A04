@@ -1,0 +1,14 @@
+Question 1 :
+
+Algorithme 2 : Trouver un élément commun à deux listes d’entiers, s’il en existe, avec un boucle while
+
+Data : Deux listes d’entiers L1, L2
+Result : x un élément commun aux deux listes s’il y en a, sinon NAN
+
+Tant que aucunes des 2 listes n'est vides :
+E1 On détermine m1 le plus petit élément de L1 et m2 le plus petit élément de L2;
+E2 Si m1 = m2 alors on pose x := m1 et on s’arrête;
+E3 Si m1 < m2 on enlève m1 de L1;
+E4 Si m2 < m1 on enlève m2 de L2;
+Fin Tant que
+E6 On renvoie NAN;
