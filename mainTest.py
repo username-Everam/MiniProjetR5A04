@@ -17,12 +17,20 @@ def test_element_commun1() :
         x = com.element_commun1(liste1,liste2)
         print(x, liste_originelle1, liste_originelle2)
 
-def afficher_graph(n):
-    tableau,tableau_res=com.test_element_chrono(n)
-    x=[*range(0,n,10)]
+def test_element_chrono(n):
+    tableau_temps=[]
+    for i in range(0 ,n, 10):
+        Nmax=10000000
+        liste1 = np.random.randint(Nmax,size=i).tolist()
+        liste2 = np.random.randint(Nmax,size=i).tolist()
+        temps=com.chronometre_element_commun1(liste1,liste2)
+        tableau_temps.append(temps)
+    return tableau_temps
 
-    print(tableau_res)
-    plt.plot(x,tableau)
+def afficher_graph(n):
+    tableau=test_element_chrono(n)
+    x=[*range(0,n,10)]
+    plt.scatter(x,tableau)
     plt.show()
     
-afficher_graph(10000)
+afficher_graph(5000)
