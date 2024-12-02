@@ -1,0 +1,11 @@
+Algorithme 1 : Trouver un élément commun à deux listes d’entiers, s’il en existe
+
+Data : Deux listes d’entiers L1, L2
+Result : x un élément commun aux deux listes s’il y en a, sinon NAN
+
+E1 On détermine m1 le plus petit élément de L1 et m2 le plus petit élément de L2;
+E2 Si m1 = m2 alors on pose x := m1 et on s’arrête;
+E3 Si m1 < m2 on enlève m1 de L1;
+E4 Si m2 < m1 on enlève m2 de L2;
+E5 Si les 2 listes sont non vides on retourne à E1;
+E6 Si (au moins) une liste est vide on s’arrête en renvoyant NAN;
