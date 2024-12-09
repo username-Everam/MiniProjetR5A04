@@ -24,6 +24,8 @@ def element_commun2(L1, L2):
     Renvoie le premier élément commun des deux listes en utilisant une structure de tas.
     Les listes doivent être transformées en tas avant l'appel.
     """
+    heapq.heapify(L1)  # Transforme L1 en tas
+    heapq.heapify(L2)  # Transforme L2 en tas
     while L1 and L2:
         min_L1 = L1[0]  # Le plus petit élément de L1 (tas)
         min_L2 = L2[0]  # Le plus petit élément de L2 (tas)
@@ -50,8 +52,6 @@ def chronometre_element_commun2(L1, L2):
     """
     Chronomètre la durée d'exécution de la fonction `element_commun2` en utilisant des tas.
     """
-    heapq.heapify(L1)  # Transforme L1 en tas
-    heapq.heapify(L2)  # Transforme L2 en tas
     start_time = time.time()
     element_commun2(L1, L2)
     end_time = time.time()

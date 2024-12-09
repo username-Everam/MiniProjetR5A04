@@ -56,14 +56,14 @@ def afficher_graph2(n):
 
 # Compare les temps des deux fonctions
 def afficher_graph_comparaison(n):
-    plt.scatter(range(0, n, 10), test_chrono_element_commun1(n), label="Liste")
-    plt.scatter(range(0, n, 10), test_chrono_element_commun2(n), label="Tas")
+    plt.plot(range(0, n, 10), test_chrono_element_commun1(n), label="Liste")
+    plt.plot(range(0, n, 10), test_chrono_element_commun2(n), label="Tas")
     plt.legend()
     plt.show()
 
 # Exécution des tests
-#afficher_graph1(500)
-#afficher_graph2(500)
-afficher_graph_comparaison(500)
+#afficher_graph1(10000)
+#afficher_graph2(10000)
+afficher_graph_comparaison(10000)
 #test_element_commun1()
 #test_element_commun2()
