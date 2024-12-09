@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 def test_element_commun1():
     for _ in range(10):
         n = 10
-        Nmax = 100
+        Nmax = 1000000
         liste1 = np.random.randint(Nmax, size=n).tolist()
         liste2 = np.random.randint(Nmax, size=n).tolist()
         print("Résultat:", com.element_commun1(liste1[:], liste2[:]), 
@@ -16,7 +16,7 @@ def test_element_commun1():
 def test_element_commun2():
     for _ in range(10):
         n = 10
-        Nmax = 100
+        Nmax = 1000000
         liste1 = np.random.randint(Nmax, size=n).tolist()
         liste2 = np.random.randint(Nmax, size=n).tolist()
         print("Résultat:", com.element_commun2(liste1[:], liste2[:]), 
@@ -62,6 +62,8 @@ def afficher_graph_comparaison(n):
     plt.show()
 
 # Exécution des tests
-afficher_graph1(500)
-afficher_graph2(500)
+#afficher_graph1(500)
+#afficher_graph2(500)
 afficher_graph_comparaison(500)
+#test_element_commun1()
+#test_element_commun2()

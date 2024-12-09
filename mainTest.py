@@ -17,10 +17,10 @@ def test_element_commun1() :
         x = com.element_commun1(liste1,liste2)
         print(x, liste_originelle1, liste_originelle2)
 
-def test_element_chrono(n):
+def test_element_chrono1(n):
     tableau_temps=[]
     for i in range(0 ,n, 10):
-        Nmax=10000000
+        Nmax=10000000000
         liste1 = np.random.randint(Nmax,size=i).tolist()
         liste2 = np.random.randint(Nmax,size=i).tolist()
         temps=com.chronometre_element_commun1(liste1,liste2)
@@ -28,7 +28,7 @@ def test_element_chrono(n):
     return tableau_temps
 
 def afficher_graph1(n):
-    tableau=test_element_chrono(n)
+    tableau=test_element_chrono1(n)
     x=[*range(0,n,10)]
     plt.scatter(x,tableau)
     plt.show()
@@ -46,7 +46,7 @@ def test_element_commun2() :
         x = com.element_commun2(liste1,liste2)
         print(x, liste_originelle1, liste_originelle2)
 
-def test_element_chrono(n):
+def test_element_chrono2(n):
     tableau_temps=[]
     for i in range(0 ,n, 10):
         Nmax=10000000000
@@ -57,14 +57,14 @@ def test_element_chrono(n):
     return tableau_temps
 
 def afficher_graph2(n):
-    tableau=test_element_chrono(n)
+    tableau=test_element_chrono1(n)
     x=[*range(0,n,10)]
     plt.scatter(x,tableau)
     plt.show()
 
 def afficher_graph_comparaison(n):
-    tableau1=test_element_chrono(n)
-    tableau2=test_element_chrono(n)
+    tableau1=test_element_chrono1(n)
+    tableau2=test_element_chrono2(n)
     x=[*range(0,n,10)]
     plt.scatter(x,tableau1)
     plt.scatter(x,tableau2)
