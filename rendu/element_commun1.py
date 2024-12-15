@@ -1,5 +1,4 @@
 import time
-import heapq
 
 # Fonction pour trouver le premier élément commun entre deux listes en utilisant un tri manuel.
 def element_commun1(L1, L2):

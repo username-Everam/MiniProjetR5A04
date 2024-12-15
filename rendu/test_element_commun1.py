@@ -1,4 +1,4 @@
-import algo_base as com
+import rendu.element_commun1 as com
 import numpy as np
 import matplotlib.pyplot as plt
 

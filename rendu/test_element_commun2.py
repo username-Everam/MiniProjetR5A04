@@ -1,4 +1,4 @@
-import algo_tas as com
+import rendu.element_commun2 as com
 import numpy as np
 import matplotlib.pyplot as plt
 
