@@ -1,4 +1,4 @@
-import rendu.element_commun1 as com
+import element_commun1 as com
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -44,4 +44,4 @@ def afficher_graph1(n):
     plt.grid()
     plt.show()
 
-afficher_graph1(1000)
+#afficher_graph1(1000)

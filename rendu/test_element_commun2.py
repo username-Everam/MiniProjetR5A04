@@ -1,4 +1,4 @@
-import rendu.element_commun2 as com
+import element_commun2 as com
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -17,7 +17,7 @@ def test_element_commun2():
 def moyenne_glissante(data, window_size=5):
     return np.convolve(data, np.ones(window_size)/window_size, mode='valid')
 
-# Test de l'algo 2 avec tas avec N allant de 0 à n par 10 et en le faisant 5 fois pour chaque N pour avoir une moyenne
+# Test de l'algo 2 avec tas avec N allant de 0 à n par 5 et en le faisant 10 fois pour chaque N pour avoir une moyenne
 def test_chrono_moyenne_tas(n, repetitions=5):
     temps_moyens = []
     tailles = range(0, n, 10)
@@ -50,4 +50,4 @@ def afficher_graph_tas_lisse(n):
     plt.tight_layout()  # Ajuste les marges pour que tout soit visible
     plt.show()
 
-afficher_graph_tas_lisse(1000)
+#afficher_graph_tas_lisse(1000)
